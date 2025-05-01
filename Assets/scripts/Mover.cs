@@ -5,9 +5,13 @@ using UnityEngine;
 
 public class Mover : MonoBehaviour
 {
+
+
     public float xValue = 0.1f;
     public float yValue = 0f;
     public float zValue = 0f;
+
+    public float speed = 10f;  
     // Start is called before the first frame update
     void Start()
     {
@@ -17,8 +21,9 @@ public class Mover : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        xValue = Input.GetAxis("Horizontal") * Time.deltaTime * 10f;
-        zValue = Input.GetAxis("Vertical")* Time.deltaTime * 10f;
+        xValue = Input.GetAxis("Horizontal") * Time.deltaTime * speed;
+        zValue = Input.GetAxis("Vertical")* Time.deltaTime * speed;
         transform.Translate(xValue, yValue, zValue);
-    }
+
+         }
 }
