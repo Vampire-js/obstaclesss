@@ -12,13 +12,14 @@ public class Mover : MonoBehaviour
     public float zValue = 0f;
 
     public float speed = 10f;  
+    private Vector3 previousPosition;
     void Start()
     {
-       
     }
 
     void Update()
     {
+  
         xValue = Input.GetAxis("Horizontal") * Time.deltaTime * speed;
         zValue = Input.GetAxis("Vertical")* Time.deltaTime * speed;
         transform.Translate(xValue, yValue, zValue);

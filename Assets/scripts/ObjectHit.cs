@@ -11,9 +11,6 @@ public class ObjectHit : MonoBehaviour
      
 
         if(collision.gameObject.tag == "Player"){
-            
-      
-
         renderer.material.color = Color.red; 
         gameObject.tag = "Hit";
         Debug.Log("Hit " + collision.gameObject.tag);
