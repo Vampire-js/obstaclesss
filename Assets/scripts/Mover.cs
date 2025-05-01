@@ -12,13 +12,11 @@ public class Mover : MonoBehaviour
     public float zValue = 0f;
 
     public float speed = 10f;  
-    // Start is called before the first frame update
     void Start()
     {
        
     }
 
-    // Update is called once per frame
     void Update()
     {
         xValue = Input.GetAxis("Horizontal") * Time.deltaTime * speed;
